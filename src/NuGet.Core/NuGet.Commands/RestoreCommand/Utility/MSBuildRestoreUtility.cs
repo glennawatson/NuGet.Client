@@ -272,6 +272,12 @@ namespace NuGet.Commands
                     result.RestoreMetadata.RestoreLockProperties = GetRestoreLockProperites(specItem);
                 }
 
+                if (restoreType == ProjectStyle.PackagesConfig)
+                {
+                    // Packages lock file properties
+                    result.RestoreMetadata.RestoreLockProperties = GetRestoreLockProperites(specItem);
+                }
+
                 if (restoreType == ProjectStyle.ProjectJson)
                 {
                     // Check runtime assets by default for project.json
